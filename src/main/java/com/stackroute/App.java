@@ -10,10 +10,10 @@ public class App
 {
     public static void main( String[] args )    {
         ApplicationContext context= new ClassPathXmlApplicationContext("beans.xml");
-        Movie movie= context.getBean("movieA",Movie.class);
-        Movie movie1=context.getBean("movieB",Movie.class);
+        Movie movie= context.getBean("movie",Movie.class);
+        movie.display();
 
-        System.out.println(movie==movie1);
+
 
 
 
