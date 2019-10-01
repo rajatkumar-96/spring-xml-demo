@@ -7,12 +7,16 @@
 
     <!-- bean definitions here -->
 
- <bean id="actor" class="domain.Actor">
+     <bean id="actor" class="com.stackroute.domain.Actor">
      <constructor-arg name="name" value="Irfan khan"></constructor-arg>
      <constructor-arg name="gender" value="Male"></constructor-arg>
      <constructor-arg name="age" value="35"></constructor-arg>
- </bean>
+     </bean>
 
-    <bean name="movie" class="domain.Movie" autowire="constructor"></bean>
+     <bean name="movie" class="com.stackroute.domain.Movie" autowire="constructor"></bean>
+    <bean id="initialize" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy">
+        <property name="message" value="We are inside"></property>
+    </bean>
+
 
 </beans>
