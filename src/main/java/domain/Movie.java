@@ -1,7 +1,9 @@
 package domain;
 
 public class Movie {
-    public void setActor(Actor actor) {
+
+
+    public Movie(Actor actor) {
         this.actor = actor;
     }
 
