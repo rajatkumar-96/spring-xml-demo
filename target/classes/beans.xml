@@ -13,10 +13,11 @@
      <constructor-arg name="age" value="35"></constructor-arg>
      </bean>
 
-     <bean name="movie" class="com.stackroute.domain.Movie" autowire="constructor"></bean>
-    <bean id="initialize" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy">
+     <bean id="movie" class="com.stackroute.domain.Movie" autowire="constructor"></bean>
+    <bean id="initialize" class="com.stackroute.demo.BeanLifecycleDemoBean" >
         <property name="message" value="We are inside"></property>
     </bean>
+    <bean id="postprocess" class="com.stackroute.demo.BeanPostProcessorDemoBean"></bean>
 
 
 </beans>

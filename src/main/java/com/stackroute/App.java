@@ -16,6 +16,9 @@ public class App
 
         BeanLifecycleDemoBean lc= context.getBean("initialize",BeanLifecycleDemoBean.class);
         System.out.println(lc);
+        Movie movie= (Movie)context.getBean("movie",Movie.class);
+        movie.display();
+
         ((ConfigurableApplicationContext)context).close();
 
 
